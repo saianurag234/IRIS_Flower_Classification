@@ -43,10 +43,10 @@ def main():
     # getting the input data from the user
     
     
-    sepal_length = st.number_input('Sepal Length',0,10,0,1,'%d')
-    sepal_width = st.number_input('Sepal Width',0,10,0,1,'%d')
-    petal_length = st.number_input('Petal Length',0,10,0,1,'%d')
-    petal_width = st.number_input('Petal Width',0,10,0,1,'%d')
+    sepal_length = st.number_input('Sepal Length',0.0,10.0,0.0,0.1,'%f')
+    sepal_width = st.number_input('Sepal Width',0.0,10.0,0.0,0.1,'%f')
+    petal_length = st.number_input('Petal Length',0.0,10.0,0.0,0.1,'%f')
+    petal_width = st.number_input('Petal Width',0.0,10.0,0.0,0.1,'%f')
    
 
     # creating a button for Prediction
