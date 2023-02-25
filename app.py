@@ -1,12 +1,15 @@
 import streamlit as st
 import joblib
-from PIL import Image
-
-new_model = joblib.load("model_iris.sav")
-model_scaler = joblib.load("scaler_iris.sav")
 
 def IRIS_prediction(input_data):
-    prediction1 = new_model.predict([input_data])
+    new_model = joblib.load("model_iris.sav")
+    model_scaler = joblib.load("scaler_iris.sav")
+    
+    feature_columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+    
+    df_input = pd.DataFrame([input_data], feature_columns)  
+    
+    prediction1 = new_model.predict(df_input)
     
     prediction = []
     
