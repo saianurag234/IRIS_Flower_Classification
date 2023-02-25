@@ -9,7 +9,9 @@ def IRIS_prediction(input_data):
     
     df_input = pd.DataFrame([input_data], feature_columns)  
     
-    prediction1 = new_model.predict(df_input)
+    scale_input = model_scaler.transform(df_input)
+    
+    prediction1 = new_model.predict(scale_input)
     
     prediction = []
     
