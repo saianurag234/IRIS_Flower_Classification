@@ -1,9 +1,11 @@
 import streamlit as st
 import joblib
+import tensorflow as tf
+from tensorflow.keras.models import load_model
 
 def IRIS_prediction(input_data):
-    new_model = joblib.load("model_iris.sav")
-    model_scaler = joblib.load("scaler_iris.sav")
+    new_model = load_model("model_iris.h5")
+    model_scaler = joblib.load("model_scaler.sav")
     
     feature_columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
     
