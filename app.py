@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import tensorflow as tf
 from tensorflow.keras.models import load_model
+import pandas as pd
 
 def IRIS_prediction(input_data):
     new_model = load_model("model_iris.h5")
